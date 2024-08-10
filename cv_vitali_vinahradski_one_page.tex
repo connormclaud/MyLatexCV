@@ -1,33 +1,49 @@
 \documentclass[11pt,a4paper,sans]{moderncv}
-\moderncvstyle{fancy}
+\moderncvstyle{classic}
 \moderncvcolor{blue}
 \usepackage{lmodern}
 \usepackage{graphicx}
+
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.8]{geometry}
+\usepackage[left=1.5cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
 
 \firstname{Vitali}
 \familyname{Vinahradski}
 \title{Software Engineer}
 \address{Berlin, Germany}
 \mobile{+4917636975925}
-\email{\newline vitali@vinahradski.de}
+\email{\mbox{vitali@vinahradski.de}}
 \social[linkedin]{vvinahradski}
 %\photo[80][0.1]{vitali_vinahradski.jpg}
 \begin{document}
 \begin{picture}(0,0)
-  \put(445,-90){\includegraphics[width=3cm]{vitali_vinahradski.jpg}}
+  \put(285,-90){\includegraphics[width=3cm]{vitali_vinahradski.jpg}}
 \end{picture}
-\makecvtitle
-\section{Skills}
-\cvitem{Top Skills}{Linux, Python, Git}
-\cvitem{Languages}{English (Fluent), Russian (Native), Belarusian (Intermediate), German (Elementary)}
 
+\makecvtitle
+\vspace{-10mm}
+\section{Skills}
+\vspace{-2mm}
+\cvitem{Top Skills}{Python, RDBMS (PostgreSQL), NoSQL, Optimization, Git}
+\cvitem{Languages}{English (Fluent), Russian (Native), Belarusian (Intermediate), German (Intermediate)}
+
+\vspace{-4mm}
 \section{Experience}
-\cventry{2019--Present}{Software Development Engineer}{Amazon Web Services (AWS)}{Berlin, Germany}{}{
+\vspace{-1mm}
+\cventry{2023--Present}{Senior Software Engineer}{Aiven}{Berlin, Germany}{}{
 \begin{itemize}
-\item Developed and maintained large-scale, distributed tools and services for browsing, searching, reviewing, and analyzing source code
-\item Worked on tools for storing rates for the billing department and a recommender engine for a large-scale Data Warehouse
+\item Leading and driving critical projects such as Tiered Storage Billing and Universal Database Replication.
+\item Implementing high-impact tools like the test data generator and optimizing key database functions.
+\item Leading feature development with a focus on quality, performance, and cross-team collaboration.
+\item Technologies: Python, PostgreSQL, FastAPI, Git, Linux.
+\end{itemize}
+}
+
+\cventry{2019--2023}{Software Development Engineer}{Amazon Web Services (AWS)}{Berlin, Germany}{}{
+\begin{itemize}
+\item Developed large-scale, distributed tools and services for reviewing and analyzing source code
+\item Worked on tools for rates for the billing department and a recommender engine for a large-scale Data Warehouse
 \item Technologies: AWS (DynamoDB, Lambda, IAM, Step Functions, Redshift), Python
 \end{itemize}
 }
@@ -42,7 +58,6 @@
 
 \cventry{2016--2018}{Lead Software Engineer}{Exadel}{Minsk, Belarus}{}{
 \begin{itemize}
-\item Developed server-side Python scripting and web Python backend
 \item Led the development team and promoted Python knowledge within the company
 \item Conducted R\&D on Machine Learning and TensorFlow applications
 \item Technologies: Python, SQLAlchemy, MySQL, Apache Airflow, Docker
@@ -58,7 +73,6 @@
 \cventry{2009--2014}{Senior Software Developer}{EPAM Systems}{Minsk, Belarus}{}{
 \begin{itemize}
 \item Contributed to the development and maintenance of the \href{https://en.wikipedia.org/wiki/IF-MAP}{IF-MAP}, a highly secure and scalable Metadata Access Point (MAP) Server.
-\item Facilitated metadata aggregation and distribution from various network infrastructure systems.
 \item Technologies: Linux, gSOAP, XML, ANSI C, Python.
 \end{itemize}
 }
@@ -70,14 +84,13 @@
 \vspace{-5mm}
 \cventry{2005--2007}{Software Developer}{Minsk Automobile Plant}{Belarus}{}{
 \begin{itemize}
-\item Developed, tested, and maintained software applications for the automation of various manufacturing processes
-\item Collaborated with engineers and other stakeholders to gather requirements and ensure proper implementation
+\item Developed, tested, and maintained software applications for the automation of manufacturing processes
+\item Collaborated with other stakeholders to gather requirements and ensure proper implementation
 \end{itemize}
 }
-
-\section{Certifications}
-\cvitem{Coursera}{Deep Learning Specialization, Machine Learning, Convolutional Neural Networks}
+\vspace{-5mm}
 \section{Education}
+\vspace{-2mm}
 \cventry{2002--2005}{Bachelor of Science - BS}{Minsk State Higher Radioengineering College}{Minsk, Belarus}{Computer Information Systems}{}
 
 \end{document}
