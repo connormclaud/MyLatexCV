@@ -1,0 +1,28 @@
+name: Build CV PDF
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: LaTeX compilation
+        uses: dante-ev/latex-action@2024-B
+        with:
+          root_file: cv_vitali_vinahradski_one_page.tex
+
+      - name: Set release tag
+        id: tag
+        run: echo "tag=v$(date +%Y-%m-%d)-${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: CV ${{ steps.tag.outputs.tag }}
+          files: cv_vitali_vinahradski_one_page.pdf
