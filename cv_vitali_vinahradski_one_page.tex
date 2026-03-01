@@ -2,10 +2,24 @@
 \moderncvstyle{classic}
 \moderncvcolor{blue}
 \usepackage{lmodern}
-\usepackage{graphicx}
 
 \usepackage[utf8]{inputenc}
 \usepackage[left=1.5cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
+
+% Native photo: 3cm wide, no frame
+\photo[3cm][0pt]{vitali_vinahradski.jpg}
+
+% Reduce post-header spacing (moderncv default is 2.5em)
+\patchcmd{\makecvhead}{\vspace{2.5em}}{\vspace{1em}}{}{}
+
+% Tighten section spacing globally (default: 2.5ex before, 1ex after)
+\patchcmd{\section}{\addvspace{2.5ex}}{\addvspace{1.5ex}}{}{}
+\patchcmd{\section}{\addvspace{1ex}}{\addvspace{0.5ex}}{}{}
+
+% Narrower hints column for more content space (default ~3.15cm)
+\setlength{\hintscolumnwidth}{2.5cm}
+
+\nopagenumbers{}
 
 \firstname{Vitali}
 \familyname{Vinahradski}
@@ -14,22 +28,15 @@
 \mobile{+4917636975925}
 \email{\mbox{vitali@vinahradski.de}}
 \social[linkedin]{vvinahradski}
-%\photo[80][0.1]{vitali_vinahradski.jpg}
+
 \begin{document}
-\begin{picture}(0,0)
-  \put(285,-90){\includegraphics[width=3cm]{vitali_vinahradski.jpg}}
-\end{picture}
 
 \makecvtitle
-\vspace{-10mm}
 \section{Skills}
-\vspace{-2mm}
 \cvitem{Top Skills}{Python, RDBMS (PostgreSQL), NoSQL, Optimization, Git}
 \cvitem{Languages}{English (Fluent), Russian (Native), Belarusian (Intermediate), German (Intermediate)}
 
-\vspace{-4mm}
 \section{Experience}
-\vspace{-1mm}
 \cventry{2023--Present}{Senior Software Engineer}{Aiven}{Berlin, Germany}{}{
 \begin{itemize}
 \item Leading and driving critical projects such as Tiered Storage Billing and Universal Database Replication.
@@ -75,21 +82,17 @@
 \item Technologies: Linux, gSOAP, XML, ANSI C, Python.
 \end{itemize}
 }
-\cventry{2008--2009}{Software Developer}{SaM Solutions}{Belarus}{}{
+\cventry[0pt]{2008--2009}{Software Developer}{SaM Solutions}{Belarus}{}{
 }
-\vspace{-5mm}
-\cventry{2007--2008}{Software Developer}{EPAM Systems}{Belarus}{}{
+\cventry[0pt]{2007--2008}{Software Developer}{EPAM Systems}{Belarus}{}{
 }
-\vspace{-5mm}
 \cventry{2005--2007}{Software Developer}{Minsk Automobile Plant}{Belarus}{}{
 \begin{itemize}
 \item Developed, tested, and maintained software applications for the automation of manufacturing processes
 \item Collaborated with other stakeholders to gather requirements and ensure proper implementation
 \end{itemize}
 }
-\vspace{-5mm}
 \section{Education}
-\vspace{-2mm}
 \cventry{2002--2005}{Bachelor of Science - BS}{Minsk State Higher Radioengineering College}{Minsk, Belarus}{Computer Information Systems}{}
 
 \end{document}
