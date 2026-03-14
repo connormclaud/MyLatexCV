@@ -9,6 +9,13 @@
 % Native photo: 3cm wide, no frame
 \photo[3cm][0pt]{vitali_vinahradski.jpg}
 
+% Align contact icons by using a left-aligned details column and fixed-width icon boxes
+\patchcmd{\makecvhead}{\begin{tabular}[b]{@{}r@{}}}{\begin{tabular}[b]{@{}l@{}}}{}{}
+\renewcommand*{\mobilephonesymbol}{\makebox[1.2em][c]{{\color{mobilephone}\small\faMobile*}}~}
+\renewcommand*{\emailsymbol}{\makebox[1.2em][c]{{\color{email}\small\faEnvelope[regular]}}~}
+\renewcommand*{\linkedinsocialsymbol}{\makebox[1.2em][c]{{\color{linkedin}\small\faLinkedinIn}}~}
+\renewcommand*{\githubsocialsymbol}{\makebox[1.2em][c]{{\color{github}\small\faGithub}}~}
+
 % Reduce post-header spacing (moderncv default is 2.5em)
 \patchcmd{\makecvhead}{\vspace{2.5em}}{\vspace{0.5em}}{}{}
 % Widen quote to full text width (default is 0.65\textwidth)
