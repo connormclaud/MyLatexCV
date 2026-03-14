@@ -10,7 +10,14 @@
 \photo[3cm][0pt]{vitali_vinahradski.jpg}
 
 % Reduce post-header spacing (moderncv default is 2.5em)
-\patchcmd{\makecvhead}{\vspace{2.5em}}{\vspace{1em}}{}{}
+\patchcmd{\makecvhead}{\vspace{2.5em}}{\vspace{0.5em}}{}{}
+% Widen quote to full text width (default is 0.65\textwidth)
+\patchcmd{\recomputecvheadlengths}{\setlength{\quotewidth}{0.65\textwidth}}{\setlength{\quotewidth}{\textwidth}}{}{}
+% Reduce spacing around the quote (default is 2.5em above and below)
+\patchcmd{\makecvhead}{\\[2.5em]}{\\[0.5em]}{}{}
+\patchcmd{\makecvhead}{\\[2.5em]}{\\[0.5em]}{}{}
+% Left-align the quote (default is centered)
+\patchcmd{\makecvhead}{\centering\quotestyle}{\raggedright\quotestyle}{}{}
 
 % Tighten section spacing globally (default: 2.5ex before, 1ex after)
 \patchcmd{\section}{\addvspace{2.5ex}}{\addvspace{1.5ex}}{}{}
@@ -29,6 +36,7 @@
 \email{\mbox{vitali@vinahradski.de}}
 \social[linkedin]{vvinahradski}
 \social[github]{connormclaud}
+\quote{Backend engineer specializing in distributed systems and performance engineering.\newline 20 years of experience building infrastructure from the kernel level to cloud-scale platforms.}
 
 \begin{document}
 
