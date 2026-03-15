@@ -19,7 +19,7 @@
 % Reduce post-header spacing (moderncv default is 2.5em)
 \patchcmd{\makecvhead}{\vspace{2.5em}}{\vspace{0.5em}}{}{}
 % Widen quote to full text width (default is 0.65\textwidth)
-\patchcmd{\recomputecvheadlengths}{\setlength{\quotewidth}{0.65\textwidth}}{\setlength{\quotewidth}{\textwidth}}{}{}
+\patchcmd{\recomputecvheadlengths}{\setlength{\quotewidth}{0.65\textwidth}}{\setlength{\quotewidth}{0.85\textwidth}}{}{}
 % Reduce spacing around the quote (default is 2.5em above and below)
 \patchcmd{\makecvhead}{\\[2.5em]}{\\[0.5em]}{}{}
 \patchcmd{\makecvhead}{\\[2.5em]}{\\[0.5em]}{}{}
@@ -43,13 +43,13 @@
 \email{\mbox{vitali@vinahradski.de}}
 \social[linkedin]{vvinahradski}
 \social[github]{connormclaud}
-\quote{Backend engineer specializing in distributed systems and performance engineering.\newline 20 years of experience building infrastructure from the kernel level to cloud-scale platforms.}
+\quote{Systems engineer focused on performance and distributed systems. Track record of order-of-magnitude speedups in data migration, query optimization, and ML inference.\newline 20 years from C/Linux network programming to cloud-scale platform engineering.}
 
 \begin{document}
 
 \makecvtitle
 \section{Skills}
-\cvitem{Top Skills}{Python, RDBMS (PostgreSQL), NoSQL, Optimization, Git}
+\cvitem{Top Skills}{Python, C, Distributed Systems, Performance Engineering, Linux}
 \cvitem{Languages}{English (C1), Russian (Native), Belarusian (B1), German (B2)}
 
 \section{Experience}
@@ -58,7 +58,7 @@
 \item Own and develop a managed Database as a Service platform
 \item Achieved 5x speedup of migrations from external services.
 \item Led critical projects such as Tiered Storage Billing and Universal Database Replication.
-\item Technologies: Python, PostgreSQL, FastAPI, Git, Linux.
+\item Technologies: Python, PostgreSQL, Linux.
 \end{itemize}
 }
 
